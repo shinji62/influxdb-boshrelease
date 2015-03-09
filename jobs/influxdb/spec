@@ -1,0 +1,13 @@
+---
+name: influxdb
+packages: []
+templates:
+  bin/monit_debugger: bin/monit_debugger
+  bin/influxdb_ctl: bin/influxdb_ctl
+  config/influxdb.conf.erb: config/influxdb.conf
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+properties:
+  influxdb.leader_address:
+    description: Hostname/IP to the leader/master of the cluster
