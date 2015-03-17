@@ -21,7 +21,8 @@ jobs:
     persistent_disk: (( meta.persistent_disk ))
     properties:
       influxdb:
-        leader_address: (( "0.influxdb-leader-z1.influxdb1." meta.environment "." meta.dns_root ))
+        cluster:
+          leader_address: (( "0.influxdb-leader-z1.influxdb1." meta.environment "." meta.dns_root ))
 
 compilation:
   cloud_properties:

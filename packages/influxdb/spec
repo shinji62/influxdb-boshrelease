@@ -1,0 +1,7 @@
+---
+name: influxdb
+dependencies: 
+files:
+- influxdb/influxdb-0.9.0-rc12-amd64.tar.gz
+
+

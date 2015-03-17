@@ -24,7 +24,8 @@ jobs:
         static_ips: ~
     properties:
       influxdb:
-        leader_address: (( jobs.influxdb_leader_z1.networks.influxdb1.static_ips.[0] ))
+        cluster:
+          leader_address: (( jobs.influxdb_leader_z1.networks.influxdb1.static_ips.[0] ))
 
 compilation:
   cloud_properties:

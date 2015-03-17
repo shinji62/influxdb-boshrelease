@@ -15,7 +15,10 @@ jobs:
     resource_pool: small_z1
     networks: (( merge ))
     persistent_disk: 0
-    properties: {}
+    properties:
+      influxdb:
+        cluster:
+          is_leader: true
   - name: influxdb_z1
     template: influxdb
     instances: 0
@@ -26,7 +29,8 @@ jobs:
       canaries: 10
     properties:
       influxdb:
-        leader_address: (( merge ))
+        cluster:
+          leader_address: (( merge ))
 
 networks: (( merge ))
 
